@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Imagine.Rest.Tests.Mocks.AccountAdminService" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAEACAAAAAAAEAAAACAAAQAAAgAgAAIAAAAAAA=</HashCode>
+      <FileName>Mocks\AccountAdminService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Imagine.Rest.Tests.Mocks.CustomerAdminService" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAABAAAAAAAAAAAAABQAAAA=</HashCode>
+      <FileName>Mocks\CustomerAdminService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Imagine.Rest.Tests.Mocks.DIDAdminService" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Mocks\DIDAdminService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Imagine.Rest.Tests.Mocks.PortaModelContext" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAQAAAAAAAAAAAAAAYAAAAAAAAAAA=</HashCode>
+      <FileName>Mocks\PortaModelContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Imagine.Rest.Tests.Mocks.ProductAdminService" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mocks\ProductAdminService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Imagine.Rest.Tests.Mocks.SessionAdminService" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Mocks\SessionAdminService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Imagine.Rest.Tests.Mocks.VoicemailService" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mocks\VoicemailService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Imagine.Rest.Tests.V2.RoutingPlanInfoOracle" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Mocks\RoutingPlanInfoOracle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Imagine.Rest.Tests.V2.AccountsControllerTest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAQACCCQCAAEAAQEAAAAAAAABIAAAAAABAIkAAAA=</HashCode>
+      <FileName>V2\AccountsControllerTest.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Imagine.Rest.Tests.V2.CustomersControllerTest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAiCAAAgEAAAgAAABAAgAAAAAAAAAAAAAAACg=</HashCode>
+      <FileName>V2\CustomersControllerTest.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Imagine.Rest.Tests.V2.DIDNumberControllerTest" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACCAAAAEAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>V2\DIDNumberControllerTest.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Vox.Porta.Rest.Tests.Mocks.DrModelContext" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mocks\DrModelContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Imagine.Rest.Tests.Properties.Settings" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Vox.Porta.Rest.Tests.V2.BillRunInstructionControllerTest" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACJAAAAAAAAAAAA=</HashCode>
+      <FileName>V2\BillRunInstructionControllerTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

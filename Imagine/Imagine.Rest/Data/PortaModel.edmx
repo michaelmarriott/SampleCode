@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="11.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="DIDNUMBERINVENTORYS" EntityType="Model.Store.DIDNUMBERINVENTORYS" store:Type="Views" store:Schema="VOXPORTA" store:Name="DIDNUMBERINVENTORYS">
+            <DefiningQuery>SELECT 
+      "DIDNUMBERINVENTORYS"."I_DID_NUMBER" AS "I_DID_NUMBER", 
+      "DIDNUMBERINVENTORYS"."PHONENUMBER" AS "PHONENUMBER", 
+      "DIDNUMBERINVENTORYS"."I_ACCOUNT" AS "I_ACCOUNT", 
+      "DIDNUMBERINVENTORYS"."RESERVED" AS "RESERVED", 
+      "DIDNUMBERINVENTORYS"."ASSIGNED" AS "ASSIGNED", 
+      "DIDNUMBERINVENTORYS"."RELEASED" AS "RELEASED", 
+      "DIDNUMBERINVENTORYS"."I_DV_BATCH" AS "I_DV_BATCH", 
+      "DIDNUMBERINVENTORYS"."ID" AS "ID", 
+      "DIDNUMBERINVENTORYS"."EXPIRATION_DATE" AS "EXPIRATION_DATE", 
+      "DIDNUMBERINVENTORYS"."BILL_STATUS" AS "BILL_STATUS", 
+      "DIDNUMBERINVENTORYS"."ENVIROMENT" AS "ENVIROMENT", 
+      "DIDNUMBERINVENTORYS"."ACCOUNT_ENVIROMENT" AS "ACCOUNT_ENVIROMENT"
+      FROM "VOXPORTA"."DIDNUMBERINVENTORYS" "DIDNUMBERINVENTORYS"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ROUTINGPLANS" EntityType="Model.Store.ROUTINGPLANS" store:Type="Views" store:Schema="VOXPORTA" store:Name="ROUTINGPLANS">
+            <DefiningQuery>SELECT 
+      "ROUTINGPLANS"."I_ROUTING_PLAN" AS "I_ROUTING_PLAN", 
+      "ROUTINGPLANS"."I_ENV" AS "I_ENV", 
+      "ROUTINGPLANS"."NAME" AS "NAME"
+      FROM "VOXPORTA"."ROUTINGPLANS" "ROUTINGPLANS"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VENDORDIDBATCHES" EntityType="Model.Store.VENDORDIDBATCHES" store:Type="Views" store:Schema="VOXPORTA" store:Name="VENDORDIDBATCHES">
+            <DefiningQuery>SELECT 
+      "VENDORDIDBATCHES"."I_DV_BATCH" AS "I_DV_BATCH", 
+      "VENDORDIDBATCHES"."NAME" AS "NAME", 
+      "VENDORDIDBATCHES"."I_ENV" AS "I_ENV"
+      FROM "VOXPORTA"."VENDORDIDBATCHES" "VENDORDIDBATCHES"</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'VOXPORTA.DIDNUMBERINVENTORYS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="DIDNUMBERINVENTORYS">
+          <Key>
+            <PropertyRef Name="I_DID_NUMBER" />
+            <PropertyRef Name="PHONENUMBER" />
+            <PropertyRef Name="ENVIROMENT" />
+          </Key>
+          <Property Name="I_DID_NUMBER" Type="number" Nullable="false" Precision="10" />
+          <Property Name="PHONENUMBER" Type="varchar2" Nullable="false" MaxLength="32" />
+          <Property Name="I_ACCOUNT" Type="number" Precision="10" />
+          <Property Name="RESERVED" Type="timestamp" />
+          <Property Name="ASSIGNED" Type="timestamp" />
+          <Property Name="RELEASED" Type="timestamp" />
+          <Property Name="I_DV_BATCH" Type="number" Precision="10" />
+          <Property Name="ID" Type="varchar2" MaxLength="128" />
+          <Property Name="EXPIRATION_DATE" Type="date" />
+          <Property Name="BILL_STATUS" Type="varchar2" MaxLength="1" />
+          <Property Name="ENVIROMENT" Type="number" Nullable="false" Precision="3" />
+          <Property Name="ACCOUNT_ENVIROMENT" Type="number" Precision="3" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'VOXPORTA.ROUTINGPLANS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="ROUTINGPLANS">
+          <Key>
+            <PropertyRef Name="I_ROUTING_PLAN" />
+            <PropertyRef Name="NAME" />
+          </Key>
+          <Property Name="I_ROUTING_PLAN" Type="number" Nullable="false" Precision="10" />
+          <Property Name="I_ENV" Type="number" Precision="3" />
+          <Property Name="NAME" Type="varchar2" Nullable="false" MaxLength="32" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'VOXPORTA.VENDORDIDBATCHES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="VENDORDIDBATCHES">
+          <Key>
+            <PropertyRef Name="I_DV_BATCH" />
+            <PropertyRef Name="NAME" />
+            <PropertyRef Name="I_ENV" />
+          </Key>
+          <Property Name="I_DV_BATCH" Type="number" Nullable="false" Precision="10" />
+          <Property Name="NAME" Type="varchar2" Nullable="false" MaxLength="32" />
+          <Property Name="I_ENV" Type="number" Nullable="false" Precision="3" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Entities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="DIDNUMBERINVENTORYS" EntityType="Model.DIDNUMBERINVENTORY" />
+          <EntitySet Name="VENDORDIDBATCHES" EntityType="Model.VENDORDIDBATCH" />
+          <EntitySet Name="ROUTINGPLANS" EntityType="Model.ROUTINGPLAN" />
+        </EntityContainer>
+        <EntityType Name="DIDNUMBERINVENTORY">
+          <Key>
+            <PropertyRef Name="I_DID_NUMBER" />
+            <PropertyRef Name="PHONENUMBER" />
+            <PropertyRef Name="ENVIROMENT" />
+          </Key>
+          <Property Type="Int32" Name="I_DID_NUMBER" Nullable="false" />
+          <Property Type="String" Name="PHONENUMBER" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="I_ACCOUNT" />
+          <Property Type="DateTime" Name="RESERVED" Precision="6" />
+          <Property Type="DateTime" Name="ASSIGNED" Precision="6" />
+          <Property Type="DateTime" Name="RELEASED" Precision="6" />
+          <Property Type="Int32" Name="I_DV_BATCH" />
+          <Property Type="String" Name="ID" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="EXPIRATION_DATE" />
+          <Property Type="String" Name="BILL_STATUS" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Type="Int16" Name="ENVIROMENT" Nullable="false" />
+          <Property Type="Int16" Name="ACCOUNT_ENVIROMENT" />
+        </EntityType>
+        <EntityType Name="VENDORDIDBATCH">
+          <Key>
+            <PropertyRef Name="I_DV_BATCH" />
+            <PropertyRef Name="NAME" />
+            <PropertyRef Name="I_ENV" />
+          </Key>
+          <Property Type="Int32" Name="I_DV_BATCH" Nullable="false" />
+          <Property Type="String" Name="NAME" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="Int16" Name="I_ENV" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ROUTINGPLAN">
+          <Key>
+            <PropertyRef Name="I_ROUTING_PLAN" />
+            <PropertyRef Name="NAME" />
+          </Key>
+          <Property Type="Int32" Name="I_ROUTING_PLAN" Nullable="false" />
+          <Property Type="Int16" Name="I_ENV" />
+          <Property Type="String" Name="NAME" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="DIDNUMBERINVENTORYS">
+            <EntityTypeMapping TypeName="Model.DIDNUMBERINVENTORY">
+              <MappingFragment StoreEntitySet="DIDNUMBERINVENTORYS">
+                <ScalarProperty Name="ACCOUNT_ENVIROMENT" ColumnName="ACCOUNT_ENVIROMENT" />
+                <ScalarProperty Name="ENVIROMENT" ColumnName="ENVIROMENT" />
+                <ScalarProperty Name="BILL_STATUS" ColumnName="BILL_STATUS" />
+                <ScalarProperty Name="EXPIRATION_DATE" ColumnName="EXPIRATION_DATE" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="I_DV_BATCH" ColumnName="I_DV_BATCH" />
+                <ScalarProperty Name="RELEASED" ColumnName="RELEASED" />
+                <ScalarProperty Name="ASSIGNED" ColumnName="ASSIGNED" />
+                <ScalarProperty Name="RESERVED" ColumnName="RESERVED" />
+                <ScalarProperty Name="I_ACCOUNT" ColumnName="I_ACCOUNT" />
+                <ScalarProperty Name="PHONENUMBER" ColumnName="PHONENUMBER" />
+                <ScalarProperty Name="I_DID_NUMBER" ColumnName="I_DID_NUMBER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VENDORDIDBATCHES">
+            <EntityTypeMapping TypeName="Model.VENDORDIDBATCH">
+              <MappingFragment StoreEntitySet="VENDORDIDBATCHES">
+                <ScalarProperty Name="I_ENV" ColumnName="I_ENV" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="I_DV_BATCH" ColumnName="I_DV_BATCH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ROUTINGPLANS">
+            <EntityTypeMapping TypeName="Model.ROUTINGPLAN">
+              <MappingFragment StoreEntitySet="ROUTINGPLANS">
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="I_ENV" ColumnName="I_ENV" />
+                <ScalarProperty Name="I_ROUTING_PLAN" ColumnName="I_ROUTING_PLAN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

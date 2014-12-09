@@ -1,0 +1,46 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Imagine.Rest.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PortaModel" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;metadata=res://*/DatabaseModels.PortaModel.csdl|res://*/DatabaseModels.PortaModel.ssdl|res://*/DatabaseModels.PortaModel.msl; provider=Oracle.DataAccess.Client; provider connection string=&amp;amp;quot; Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=10.17.1.11)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=voxprod)));User Id=VOXPORTA;Password=p0rtap0rtav0x&amp;amp;quot;&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">metadata=res://*/DatabaseModels.PortaModel.csdl|res://*/DatabaseModels.PortaModel.ssdl|res://*/DatabaseModels.PortaModel.msl; provider=Oracle.DataAccess.Client; provider connection string=&amp;quot; Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=10.17.1.11)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=voxprod)));User Id=VOXPORTA;Password=p0rtap0rtav0x&amp;quot;</Value>
+    </Setting>
+    <Setting Name="ThirdParty_Customer_CustomerAdminService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://localhost:443/soap/</Value>
+    </Setting>
+    <Setting Name="ThirdParty_Authentication_SessionAdminService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://localhost:443/soap/</Value>
+    </Setting>
+    <Setting Name="ThirdParty_Product_ProductAdminService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://localhost:443/soap/</Value>
+    </Setting>
+    <Setting Name="ThirdParty_DIDAdminService_DIDAdminService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://localhost:443/soap/</Value>
+    </Setting>
+    <Setting Name="Voxzal" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;SERVER=mysql-test.voxdev.co.za;DATABASE=DataPro_Master;UID=DBU_Datapro;PASSWORD=devdb97531;&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">SERVER=mysql-test.voxdev.co.za;DATABASE=DataPro_Master;UID=DBU_Datapro;PASSWORD=devdb97531;</Value>
+    </Setting>
+    <Setting Name="Dr_Reporting" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=10.17.1.11)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=voxprod)));User ID=RepUser;Password=R3pU53r;Min Pool Size=10;Connection Lifetime=120;Connection Timeout=2700;Incr Pool Size=5;Decr Pool Size=2&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=10.17.1.11)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=voxprod)));User ID=RepUser;Password=R3pU53r;Min Pool Size=10;Connection Lifetime=120;Connection Timeout=2700;Incr Pool Size=5;Decr Pool Size=2</Value>
+    </Setting>
+    <Setting Name="Dr" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=10.17.1.11)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=voxprod)));User ID=voxcdr;Password=voxcdr;Min Pool Size=10;Connection Lifetime=120;Connection Timeout=2700;Incr Pool Size=5;Decr Pool Size=2&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=10.17.1.11)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=voxprod)));User ID=voxcdr;Password=voxcdr;Min Pool Size=10;Connection Lifetime=120;Connection Timeout=2700;Incr Pool Size=5;Decr Pool Size=2</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

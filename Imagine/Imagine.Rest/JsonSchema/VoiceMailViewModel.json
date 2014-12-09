@@ -1,0 +1,17 @@
+{
+  "title": "VoiceMailViewModel",
+  "type": "object",
+  "properties": {
+    "Pin": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Enabled": {
+      "required": true,
+      "type": "boolean"
+    }
+  }
+}

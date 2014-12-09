@@ -1,0 +1,10 @@
+﻿
+CREATE TABLE voice_job (
+  `id` char(36) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `parameters` text NOT NULL,
+  `status` varchar(20) NOT NULL,
+  `last_updated` TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP DEFAULT '0000-00-00',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+

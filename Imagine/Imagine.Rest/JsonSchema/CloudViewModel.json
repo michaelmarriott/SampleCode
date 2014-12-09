@@ -1,0 +1,28 @@
+{
+  "title": "CloudViewModel",
+  "type": "object",
+  "properties": {
+    "CloudId": {
+      "required": true,
+      "type": "integer"
+    },
+    "Name": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "NetworkId": {
+      "required": true,
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "TimeZoneMin": {
+      "required": true,
+      "type": "integer"
+    }
+  }
+}

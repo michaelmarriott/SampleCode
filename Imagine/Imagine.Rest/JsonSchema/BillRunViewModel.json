@@ -1,0 +1,87 @@
+{
+  "title": "BillRunViewModel",
+  "type": "object",
+  "properties": {
+    "Id": {
+      "required": true,
+      "type": "integer"
+    },
+    "LobId": {
+      "required": true,
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Code": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Name": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "DateFrom": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "DateTo": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "InboundDateFrom": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "InboundDateTo": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "IsCompleted": {
+      "required": true,
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Direction": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "IsMidMonth": {
+      "required": true,
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "IsExported": {
+      "required": true,
+      "type": [
+        "integer",
+        "null"
+      ]
+    }
+  }
+}

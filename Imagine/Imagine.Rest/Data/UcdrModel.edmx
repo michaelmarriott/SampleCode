@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model1.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="11.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="Model1StoreContainer">
+          <EntitySet Name="BILLRUN" EntityType="Model1.Store.BILLRUN" store:Type="Tables" Schema="VOXCDR" />
+          <EntitySet Name="BILLRUN_INSTRUCTION" EntityType="Model1.Store.BILLRUN_INSTRUCTION" store:Type="Tables" Schema="VOXCDR" />
+          <EntitySet Name="BILLRUN_INSTRUCTION_VALUE" EntityType="Model1.Store.BILLRUN_INSTRUCTION_VALUE" store:Type="Tables" Schema="VOXCDR" />
+          <EntitySet Name="CLOUD" EntityType="Model1.Store.CLOUD" store:Type="Tables" Schema="VOXCDR" />
+          <EntitySet Name="FLAG" EntityType="Model1.Store.FLAG" store:Type="Tables" Schema="VOXCDR" />
+          <AssociationSet Name="BILLRUN_INSTRUCTION_VALUE_FK1" Association="Model1.Store.BILLRUN_INSTRUCTION_VALUE_FK1">
+            <End Role="BILLRUN_INSTRUCTION" EntitySet="BILLRUN_INSTRUCTION" />
+            <End Role="BILLRUN_INSTRUCTION_VALUE" EntitySet="BILLRUN_INSTRUCTION_VALUE" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="BILLRUN">
+          <Key>
+            <PropertyRef Name="BILLRUNID" />
+          </Key>
+          <Property Name="BILLRUNID" Type="number" Nullable="false" />
+          <Property Name="LOBID" Type="number" />
+          <Property Name="DATEFROM" Type="date" />
+          <Property Name="DATETO" Type="date" />
+          <Property Name="ISCOMPLETED" Type="number" Precision="1" />
+          <Property Name="ISEXPORTED" Type="number" Precision="1" />
+          <Property Name="NAME" Type="varchar2" MaxLength="20" />
+          <Property Name="CODE" Type="varchar2" MaxLength="10" />
+          <Property Name="ISMIDMONTH" Type="number" Precision="1" />
+          <Property Name="INBOUNDDATEFROM" Type="date" />
+          <Property Name="INBOUNDDATETO" Type="date" />
+          <Property Name="DIRECTION" Type="varchar2" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="BILLRUN_INSTRUCTION">
+          <Key>
+            <PropertyRef Name="INSTRUCTIONID" />
+          </Key>
+          <Property Name="INSTRUCTIONID" Type="varchar2" Nullable="false" MaxLength="36" />
+          <Property Name="TYPE" Type="varchar2" Nullable="false" MaxLength="20" />
+          <Property Name="NAME" Type="varchar2" MaxLength="50" />
+          <Property Name="STATUS" Type="varchar2" />
+          <Property Name="DATE_CREATED" Type="date" />
+          <Property Name="DATE_COMPLETED" Type="date" />
+          <Property Name="LAST_MODIFIED" Type="date" />
+          <Property Name="USERID" Type="varchar2" MaxLength="36" />
+        </EntityType>
+        <EntityType Name="BILLRUN_INSTRUCTION_VALUE">
+          <Key>
+            <PropertyRef Name="INSTRUCTION_VALUEID" />
+          </Key>
+          <Property Name="INSTRUCTION_VALUEID" Type="varchar2" Nullable="false" MaxLength="36" />
+          <Property Name="INSTRUCTIONID" Type="varchar2" Nullable="false" MaxLength="36" />
+          <Property Name="NAME" Type="varchar2" MaxLength="50" />
+          <Property Name="VALUE" Type="varchar2" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="CLOUD">
+          <Key>
+            <PropertyRef Name="CLOUDID" />
+          </Key>
+          <Property Name="CLOUDID" Type="number" Nullable="false" />
+          <Property Name="NETWORKID" Type="number" />
+          <Property Name="NAME" Type="varchar2" MaxLength="100" />
+          <Property Name="TIMEZONEMIN" Type="number" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FLAG">
+          <Key>
+            <PropertyRef Name="FLAGID" />
+          </Key>
+          <Property Name="FLAGID" Type="number" Nullable="false" />
+          <Property Name="NAME" Type="varchar2" Nullable="false" MaxLength="50" />
+          <Property Name="DATEFROM" Type="date" />
+          <Property Name="DATETO" Type="date" />
+          <Property Name="CLOUDID" Type="number" />
+          <Property Name="STATUS" Type="number" />
+        </EntityType>
+        <Association Name="BILLRUN_INSTRUCTION_VALUE_FK1">
+          <End Role="BILLRUN_INSTRUCTION" Type="Model1.Store.BILLRUN_INSTRUCTION" Multiplicity="1" />
+          <End Role="BILLRUN_INSTRUCTION_VALUE" Type="Model1.Store.BILLRUN_INSTRUCTION_VALUE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BILLRUN_INSTRUCTION">
+              <PropertyRef Name="INSTRUCTIONID" />
+            </Principal>
+            <Dependent Role="BILLRUN_INSTRUCTION_VALUE">
+              <PropertyRef Name="INSTRUCTIONID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DrEntity" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="CLOUDs" EntityType="Model.CLOUD" />
+          <EntitySet Name="FLAGs" EntityType="Model.FLAG" />
+          <EntitySet Name="BILLRUNs" EntityType="Model.BILLRUN" />
+          <EntitySet Name="BILLRUN_INSTRUCTION" EntityType="Model.BILLRUN_INSTRUCTION" />
+          <EntitySet Name="BILLRUN_INSTRUCTION_VALUE" EntityType="Model.BILLRUN_INSTRUCTION_VALUE" />
+          <AssociationSet Name="BILLRUN_INSTRUCTION_VALUE_FK1" Association="Model.BILLRUN_INSTRUCTION_VALUE_FK1">
+            <End Role="BILLRUN_INSTRUCTION" EntitySet="BILLRUN_INSTRUCTION" />
+            <End Role="BILLRUN_INSTRUCTION_VALUE" EntitySet="BILLRUN_INSTRUCTION_VALUE" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="CLOUD">
+          <Key>
+            <PropertyRef Name="CLOUDID" />
+          </Key>
+          <Property Name="CLOUDID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="NETWORKID" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="NAME" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="TIMEZONEMIN" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+        </EntityType>
+        <EntityType Name="FLAG">
+          <Key>
+            <PropertyRef Name="FLAGID" />
+          </Key>
+          <Property Name="FLAGID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="NAME" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DATEFROM" Type="DateTime" />
+          <Property Name="DATETO" Type="DateTime" />
+          <Property Name="CLOUDID" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="STATUS" Type="Decimal" Precision="38" Scale="0" />
+        </EntityType>
+        <EntityType Name="BILLRUN">
+          <Key>
+            <PropertyRef Name="BILLRUNID" />
+          </Key>
+          <Property Type="Decimal" Name="BILLRUNID" Nullable="false" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="LOBID" Precision="38" Scale="0" />
+          <Property Type="DateTime" Name="DATEFROM" />
+          <Property Type="DateTime" Name="DATETO" />
+          <Property Type="Int16" Name="ISCOMPLETED" />
+          <Property Type="Int16" Name="ISEXPORTED" />
+          <Property Type="String" Name="NAME" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CODE" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Int16" Name="ISMIDMONTH" />
+          <Property Type="DateTime" Name="INBOUNDDATEFROM" />
+          <Property Type="DateTime" Name="INBOUNDDATETO" />
+          <Property Type="String" Name="DIRECTION" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="BILLRUN_INSTRUCTION">
+          <Key>
+            <PropertyRef Name="INSTRUCTIONID" />
+          </Key>
+          <Property Type="String" Name="INSTRUCTIONID" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TYPE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NAME" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="STATUS" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DATE_CREATED" />
+          <Property Type="DateTime" Name="DATE_COMPLETED" />
+          <Property Type="DateTime" Name="LAST_MODIFIED" />
+          <Property Type="String" Name="USERID" MaxLength="36" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="BILLRUN_INSTRUCTION_VALUE" Relationship="Model.BILLRUN_INSTRUCTION_VALUE_FK1" FromRole="BILLRUN_INSTRUCTION" ToRole="BILLRUN_INSTRUCTION_VALUE" />
+        </EntityType>
+        <EntityType Name="BILLRUN_INSTRUCTION_VALUE">
+          <Key>
+            <PropertyRef Name="INSTRUCTION_VALUEID" />
+          </Key>
+          <Property Type="String" Name="INSTRUCTION_VALUEID" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="INSTRUCTIONID" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NAME" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VALUE" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="BILLRUN_INSTRUCTION" Relationship="Model.BILLRUN_INSTRUCTION_VALUE_FK1" FromRole="BILLRUN_INSTRUCTION_VALUE" ToRole="BILLRUN_INSTRUCTION" />
+        </EntityType>
+        <Association Name="BILLRUN_INSTRUCTION_VALUE_FK1">
+          <End Type="Model.BILLRUN_INSTRUCTION" Role="BILLRUN_INSTRUCTION" Multiplicity="1" />
+          <End Type="Model.BILLRUN_INSTRUCTION_VALUE" Role="BILLRUN_INSTRUCTION_VALUE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BILLRUN_INSTRUCTION">
+              <PropertyRef Name="INSTRUCTIONID" />
+            </Principal>
+            <Dependent Role="BILLRUN_INSTRUCTION_VALUE">
+              <PropertyRef Name="INSTRUCTIONID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="DrEntity">
+          <EntitySetMapping Name="CLOUDs">
+            <EntityTypeMapping TypeName="Model.CLOUD">
+              <MappingFragment StoreEntitySet="CLOUD">
+                <ScalarProperty Name="CLOUDID" ColumnName="CLOUDID" />
+                <ScalarProperty Name="NETWORKID" ColumnName="NETWORKID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="TIMEZONEMIN" ColumnName="TIMEZONEMIN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FLAGs">
+            <EntityTypeMapping TypeName="Model.FLAG">
+              <MappingFragment StoreEntitySet="FLAG">
+                <ScalarProperty Name="FLAGID" ColumnName="FLAGID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="DATEFROM" ColumnName="DATEFROM" />
+                <ScalarProperty Name="DATETO" ColumnName="DATETO" />
+                <ScalarProperty Name="CLOUDID" ColumnName="CLOUDID" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BILLRUNs">
+            <EntityTypeMapping TypeName="Model.BILLRUN">
+              <MappingFragment StoreEntitySet="BILLRUN">
+                <ScalarProperty Name="DIRECTION" ColumnName="DIRECTION" />
+                <ScalarProperty Name="INBOUNDDATETO" ColumnName="INBOUNDDATETO" />
+                <ScalarProperty Name="INBOUNDDATEFROM" ColumnName="INBOUNDDATEFROM" />
+                <ScalarProperty Name="ISMIDMONTH" ColumnName="ISMIDMONTH" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="ISEXPORTED" ColumnName="ISEXPORTED" />
+                <ScalarProperty Name="ISCOMPLETED" ColumnName="ISCOMPLETED" />
+                <ScalarProperty Name="DATETO" ColumnName="DATETO" />
+                <ScalarProperty Name="DATEFROM" ColumnName="DATEFROM" />
+                <ScalarProperty Name="LOBID" ColumnName="LOBID" />
+                <ScalarProperty Name="BILLRUNID" ColumnName="BILLRUNID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BILLRUN_INSTRUCTION">
+            <EntityTypeMapping TypeName="Model.BILLRUN_INSTRUCTION">
+              <MappingFragment StoreEntitySet="BILLRUN_INSTRUCTION">
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="LAST_MODIFIED" ColumnName="LAST_MODIFIED" />
+                <ScalarProperty Name="DATE_COMPLETED" ColumnName="DATE_COMPLETED" />
+                <ScalarProperty Name="DATE_CREATED" ColumnName="DATE_CREATED" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+                <ScalarProperty Name="INSTRUCTIONID" ColumnName="INSTRUCTIONID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BILLRUN_INSTRUCTION_VALUE">
+            <EntityTypeMapping TypeName="Model.BILLRUN_INSTRUCTION_VALUE">
+              <MappingFragment StoreEntitySet="BILLRUN_INSTRUCTION_VALUE">
+                <ScalarProperty Name="VALUE" ColumnName="VALUE" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="INSTRUCTIONID" ColumnName="INSTRUCTIONID" />
+                <ScalarProperty Name="INSTRUCTION_VALUEID" ColumnName="INSTRUCTION_VALUEID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

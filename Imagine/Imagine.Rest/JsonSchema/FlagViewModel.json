@@ -1,0 +1,45 @@
+{
+  "title": "FlagViewModel",
+  "type": "object",
+  "properties": {
+    "FlagId": {
+      "required": true,
+      "type": "integer"
+    },
+    "CloudId": {
+      "required": true,
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "Name": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "DateFrom": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "DateTo": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Status": {
+      "required": true,
+      "type": [
+        "integer",
+        "null"
+      ]
+    }
+  }
+}
