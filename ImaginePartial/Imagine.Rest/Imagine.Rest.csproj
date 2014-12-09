@@ -266,7 +266,6 @@
     <Compile Include="Controller\V2\VoiceCustomersController.cs" />
     <Compile Include="Controller\V2\VoiceDIDNumbersController.cs" />
     <Compile Include="Controller\V2\VoiceJobsController.cs" />
-    <Compile Include="Dapper\SqlMapperExtensions.cs" />
     <Compile Include="Data\CLOUD.cs">
       <DependentUpon>UcdrModel.tt</DependentUpon>
     </Compile>
@@ -276,7 +275,6 @@
     <Compile Include="Data\FLAG.cs">
       <DependentUpon>UcdrModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\OracleManager.cs" />
     <Compile Include="Data\PortaModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
